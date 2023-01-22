@@ -5,34 +5,45 @@ int main() {
   char n;
   cout << "========================================================" << 
 endl;
-  cout << '\t'<<'\t'<<">>>OHM's LAW CALCULATOR  <<<< I = U/R >>>>" << endl;
+  cout << '\t'<<'\t'<<">>> OHM's LAW - CALCULATOR <<< I = U/R >>>>" << endl;
   cout << "========================================================" << 
 endl;
   cout << "Select which value you need to calculate: r, u, i" << endl << endl;
   cin >> n;
-
+  cout<< "_____________" << endl;
+  
   switch(n) {
    
-    case 'r':
-      int i;
-      int u;
+    case 'R':
+      float i;
+      float u;
       float r;
       
       cout << "Rezistance"<< endl<< endl;
-      cout << "Type Voltage(u) Value !" << endl;
+      cout << "Type Voltage Value !" << endl;
       cin >> u;
       cout<< "Volts" <<endl << endl;
-      cout << "Type Curent(i) Value !" << endl;
+      cout << "Type Curent Value !" << endl;
       cin >> i;
       cout<< "Ampers"<<endl<<endl;
       r = u/i;
-      cout << "Resitance = " << r << " Ohms" << endl;
-      break;
+      cout << "Resitance = " << r << " Ohms" << endl<< endl;
+
+      cout << "Do you need to calculte other"<< endl;
+      
+          char a;
+          cin >> a;
+          if (a == 'y')
+          cout << "Select which value you need to calculate: r, u, i";
+          cin >> n;
+        
+      
+   break;
     
-    case 'u':
-      int in;
-      int te;
-      int re;
+    case 'U':
+      float in;
+      float te;
+      float re;
       
       cout << "Voltage"<< endl << endl;
       cout << "Type Curent Value !"<<endl;
@@ -46,16 +57,16 @@ endl;
       break;
 
     
-    case 'i':
-      int intensitate;
-      int tensiune;
-      int rezistenta;
+    case 'I':
+      float intensitate;
+      float tensiune;
+      float rezistenta;
       
       cout << "Curent"<< endl;
-      cout << "Type Voltage(u) Value !"<< endl;
+      cout << "Type Voltage Value !"<< endl;
       cin >> tensiune;
       cout<< "Volts"<<endl << endl;
-      cout << "Type Resitance(r) Value !"<< endl;
+      cout << "Type Resitance Value !"<< endl;
       cin >> rezistenta;
       cout<<"Ohms"<< endl<< endl;
       
