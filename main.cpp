@@ -2,46 +2,66 @@
 using namespace std;
 
 int main() {
-  
-  float r;
-  float i;
-  float u(u>=0);
   char n;
-  char necunoscute;
+  cout << "========================================================" << 
+endl;
+  cout << '\t'<<'\t'<<">>> OHM's LAW - CALCULATOR <<< I = U/R >>>>" << endl;
+  cout << "========================================================" << 
+endl;
+  cout << "Select which value you need to calculate: r, u, i" << endl << endl;
+  cin >> n;
+  cout<< "_____________" << endl;
   
-  cout << "========================================================" << endl;
-  cout << '\t'<<'\t'<<'\t'<<">>>> Legea lui OHM  <<<< I = U/R >>>>" << endl;
-  cout << "========================================================" << endl;
-
-  cout << "Alegeti necunoscuta: r,i,u ? " << endl << endl;
-  cin >> necunoscute;
-  cout << necunoscute << endl;
-  cout << "Introduceti valorile celor doua variabilele cunoscute: "<< endl << endl;
+  switch(n) {
+   
+    case 'r':
+      float i;
+      float u;
+      float r;
+      cout << "Rezistance"<< endl<< endl;
+      cout << "Type Voltage Value !" << endl;
+      cin >> u;
+      cout<< "Volts" <<endl << endl;
+      cout << "Type Curent Value !" << endl;
+      cin >> i;
+      cout<< "Ampers"<<endl<<endl;
+      r = u/i;
+      cout << "Resitance = " << r << " Ohms" << endl<< endl;
+      break;
+     
     
-  cout << "Valoarea Tensiunii: ";
-  cin >> u;
-  // cout << u << "volti";
-  //cout << "volti" << endl;
-  
-  cout << "Valoarea Intensitatii: ";
-  cin >> i;
-  //cout << "amperi" << endl;
+    case 'u':
+      float in;
+      float te;
+      float re;
+      cout << "Voltage"<< endl << endl;
+      cout << "Type Curent Value !"<<endl;
+      cin >> in;
+      cout << "Ampers" << endl<<endl;
+      cout << "Type Resitance Value !"<< endl;
+      cin >> re;
+      cout<< "Ohms"<<endl<<endl;
+      te = in*re;
+      cout << "Voltage = " << te << " Volts" << endl;
+      break;
 
-  cout << "Valoarea Rezistentei: ";
-  cin >> r;
-  
-  
-  //n = {i,r,u};
-
-
-  
-  // i = u/r;
-  r = u/i;
-  // u = i*r;
-  
-  cout << "Valoarea Rezistentei: " <<  r << " ohm" << endl;
-  cout << "Nr. Octeti - variabila r: " << sizeof(r) << endl; // lungimea în octeți ocupată de variabila r
-
-  cin.ignore();
-  return 0;
+    
+    case 'i':
+      float intensitate;
+      float tensiune;
+      float rezistenta;
+      cout << "Curent"<< endl;
+      cout << "Type Voltage Value !"<< endl;
+      cin >> tensiune;
+      cout<< "Volts"<<endl << endl;
+      cout << "Type Resitance Value !"<< endl;
+      cin >> rezistenta;
+      cout<<"Ohms"<< endl<< endl;
+      intensitate = tensiune/rezistenta;
+      cout << "Curent = " << intensitate << " Ampers" << endl;
+      break;
+      
+    default:
+       cout << "Enter only: r, u, i";
+   }
 }
